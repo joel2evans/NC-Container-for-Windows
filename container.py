@@ -2,6 +2,17 @@ import socket
 import sys
 import threading
 
+BANNER = r"""
+  _  _ ___ _____ ___    _  _____   
+ | \| | __|_   _/ __|  /_\|_   _|  
+ | .` | _|  | || (__  / _ \ | |    
+ |_|\_|\___||_| \___/_/   \_|_|    
+                                   
+ +---------------------------------------------------------+
+ |  [!] NOTICE FOR RECOVERED LOGS                          |
+ |  IF YOU MADE IT THIS FAR, CHECK @Project_Lucy24        |
+ +---------------------------------------------------------+
+"""
 
 def receive_data(sock):
   """Continuously listens for data from the server and prints it."""
@@ -32,6 +43,7 @@ def send_data(sock):
 
 
 def main():
+  print(BANNER)
   print("=== Interactive Netcat Client ===")
 
   # Prompt for host address
